@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Difference between HTTP 1.1 AND HTTP 2</title>
+</head>
+<body>
+
+<h1>Difference between HTTP 1.1 AND HTTP 2</h1>
+<p>HTTP/1.1: For better understanding, let’s assume <br>the situation when you make a request to the server for the geeksforgeeks.<br>html page & server responds to you as a resource geeksforgeeks.html page.<br> before sending the request and the response there is a TCP connection <br>established between client & server. again you make a request to the server for image img.jpg <br>& the server gives a response as an image img.jpg. <br>the connection was not lost here after the first request because we add a keep-alive header which is the part of the request so there is an open connection <br>between the server & client. there is a persistent connection which means several requests & responses <br>are merged in a single connection. These are the drawbacks that lead to the creation <br>of HTTP/2: The first problem is HTTP/1.1 transfer all the requests & responses in the <br>plain text message form. The second one is head of line blocking in which TCP connection <br>is blocked all other requests until the response does not receive. all the information <br>related to the header file is repeated in every request.<br>
+
+    HTTP/2: HTTP/2 was developed over the SPDY protocol. <br>HTTP/2 works on the binary framing layer instead of textual that converts <br>all the messages in binary format. it works on fully multiplexed that is <br>one TCP connection is used for multiple requests. HTTP/2 uses HPACK which <br>is used to split data from header. it compresses the header. The server sends all the <br>other files like CSS & JS without the request of the client using the PUSH <br>frame./p>
+
+</body>
+</html>
+
